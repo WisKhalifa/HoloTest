@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class NRSRManager : Singleton<NRSRManager> {
 
@@ -10,6 +11,12 @@ public class NRSRManager : Singleton<NRSRManager> {
 
     public int TotalNumberOfObjects = 0;
     public int PreviousFrameObjectCount = 0;
+
+    public static GameObject FocusedObject;
+
+    public delegate void OnObjectFocused();
+    public static event OnObjectFocused ObjectFocused;
+    public static event OnObjectFocused ObjectUnFocused;
 
     public int numberOfVisibleObjects;
     public int numberOfFilteredObjects;
@@ -32,6 +39,7 @@ public class NRSRManager : Singleton<NRSRManager> {
                 if (go.transform.root.gameObject.GetComponent<Bbox>() == null)
                 {
                     Bbox box = go.transform.root.gameObject.AddComponent<Bbox>();
+                    go.transform.root.gameObject.AddComponent<FadeObjectNotActive>();
                     box.isRootObject = true;
                 }
             }
@@ -62,5 +70,38 @@ public class NRSRManager : Singleton<NRSRManager> {
                 numberOfFilteredObjects++;
             }
         }
+    }
+
+    private void Update()
+    {
+        if (FocusedObject == null)
+        {
+            if (ObjectUnFocused != null)
+            {
+                ObjectUnFocused();
+            }
+            return;
+        }
+        if(FocusedObject != null)
+        {
+            if(ObjectFocused != null)
+            {
+                ObjectFocused();
+            }
+        }
+            
+    }
+
+    public static void SendFocusedObjectToManager(GameObject go)
+    {
+        FocusedObject = go;
+        Debug.Log(go.name + " to NRSRManager");
+
+    }
+    public static void ClearFocusedObjectFromManager()
+    {
+
+        FocusedObject = null;
+
     }
 }

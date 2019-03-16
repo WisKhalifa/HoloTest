@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Bbox : MonoBehaviour, IFocusable {
 
@@ -22,6 +23,7 @@ public class Bbox : MonoBehaviour, IFocusable {
         {
             return;
         }
+        NRSRManager.SendFocusedObjectToManager(gameObject);
 
         isActive = true;
     }
@@ -36,6 +38,7 @@ public class Bbox : MonoBehaviour, IFocusable {
         {
             return;
         }
+        NRSRManager.ClearFocusedObjectFromManager();
         isActive = false;
     }
 
@@ -145,4 +148,6 @@ public class Bbox : MonoBehaviour, IFocusable {
         //Material
         CornerHandle.GetComponent<Renderer>().material = BboxMat;
     }
+
+    
 }
