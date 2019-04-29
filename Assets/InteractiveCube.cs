@@ -17,10 +17,10 @@ public class InteractiveCube : MonoBehaviour, IFocusable, IInputClickHandler {
 	// Update is called once per frame
 	void Update () {
         // Rotate the cube around the y-axis at one degree per second multiplied by the speed
-		if (Rotating)
+		/*if (Rotating)
         {
             transform.Rotate(Vector3.up * Time.deltaTime * RotationSpeed);
-        }
+        }*/
 	}
 
     // On cube focus set rotate to true
