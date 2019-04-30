@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuListener : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
         Messenger.Instance.AddListener<MenuSelectedMessage>(ProcessMenuMessage);
 	}

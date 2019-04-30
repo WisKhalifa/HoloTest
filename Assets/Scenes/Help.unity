@@ -210,6 +210,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinDistance: 0
+--- !u!1001 &185598575
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1127663243}
+    m_Modifications:
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.1276801
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.11346878
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.7630242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e3c7efb4c53fb874597124602ab4ab3e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &534388077
 Prefab:
   m_ObjectHideFlags: 0
@@ -332,7 +374,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1127663243}
   - component: {fileID: 1127663242}
-  - component: {fileID: 1127663241}
   - component: {fileID: 1127663244}
   - component: {fileID: 1127663245}
   m_Layer: 0
@@ -342,17 +383,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1127663241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1127663240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39223de784a0874388f014cd69caa6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1127663242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +410,7 @@ Transform:
   m_Children:
   - {fileID: 27529534}
   - {fileID: 1237574742}
+  - {fileID: 1446820781}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -453,11 +484,15 @@ Prefab:
     - target: {fileID: 102000010767390410, guid: bfdc7f60d7205c84f82a4806a5352d60,
         type: 2}
       propertyPath: m_Text
-      value: "Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit.\n Etiam non
-        interdum enim,\n vel maximus nibh. \nVivamus volutpat lacus tellus,\n ac ullamcorper
-        tortor blandit \nsit amet. \nProin tincidunt enim turpis, \nsit amet condimentum
-        dolor\n vestibulum id. \nNulla in malesuada lorem. \nAliquam erat volutpat.
-        \n"
+      value: "------HELP------\nTo create a graph: select the 'Create a Graph' option
+        in the menu,\nthen select a .CSV file from your directory to upload data values\nfor
+        the graph you would like to create.\nTo view a test model: select the test
+        model. You can get used to\nthe functions and gestures to manipulate the holograms.\nSelect
+        the expanding arrow on the menu, then select which tool\nyou would like to
+        use. You can rotate, resize or move the graph.\nYou can also delete the object
+        by pressing the X button.\nTo quit the program, simply go back to the main
+        menu and select \nthe 'Quit' button.\nWhen you want to go back to the main
+        menu at any time, select\nthe back button."
       objectReference: {fileID: 0}
     - target: {fileID: 4000010330146594, guid: bfdc7f60d7205c84f82a4806a5352d60, type: 2}
       propertyPath: m_LocalScale.y
@@ -556,6 +591,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1446820781 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4653699543711102, guid: e3c7efb4c53fb874597124602ab4ab3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 185598575}
 --- !u!1001 &1459310912
 Prefab:
   m_ObjectHideFlags: 0
