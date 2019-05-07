@@ -336,6 +336,8 @@ GameObject:
   - component: {fileID: 1127663241}
   - component: {fileID: 1127663244}
   - component: {fileID: 1127663245}
+  - component: {fileID: 1127663247}
+  - component: {fileID: 1127663246}
   m_Layer: 0
   m_Name: MenuHolder
   m_TagString: Untagged
@@ -412,6 +414,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateAngle: 180
+--- !u!114 &1127663246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127663240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1835e1d952bfc34aa297fbc04f53ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1127663247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127663240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd24319dd7a475428cb6e707a9930b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1237574741
 Prefab:
   m_ObjectHideFlags: 0

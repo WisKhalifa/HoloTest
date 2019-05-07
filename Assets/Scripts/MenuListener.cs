@@ -15,7 +15,7 @@ public class MenuListener : MonoBehaviour {
         if (msg.MenuItem.MenuId == 1)
         {
             Debug.Log("you selected 1: " + msg.MenuItem.Title);
-            
+            SceneManager.LoadScene("CreateGraph");
         }
         if (msg.MenuItem.MenuId == 2)
         {
